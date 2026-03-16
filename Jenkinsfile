@@ -10,6 +10,11 @@ VERCEL_TOKEN=credentials('vercel-token')
                 bat "npm install"
             }
         }
+        stage("convert to js"){
+            steps{
+                bat "tsc"
+            }
+        }
         stage("test"){
             steps{
                 echo "testing"
